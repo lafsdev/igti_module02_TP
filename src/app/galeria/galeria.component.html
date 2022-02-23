@@ -1,0 +1,16 @@
+<h1>{{ titulo }}</h1>
+
+<table>
+  <tr>
+    <img alt="item" src="{{ item }}" />
+  </tr>
+  <tr>
+    <p>Foto {{ i + 1 }} de {{ itemImageUrl.length }}</p>
+  </tr>
+  <button [disabled]="i == 0" (click)="firstImage()"><<</button>
+  <button [disabled]="i == 0" (click)="lastImage()"><</button>
+  <button [disabled]="i == itemImageUrl.length - 1" (click)="nextImage()">
+    >
+  </button>
+  <button [disabled]="i == itemImageUrl.length - 1" (click)="last()">>></button>
+</table>
